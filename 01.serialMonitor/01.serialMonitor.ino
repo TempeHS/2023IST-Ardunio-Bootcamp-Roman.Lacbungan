@@ -9,7 +9,10 @@
     5. I understand the impact of having more than one setup or loop methods in my sketch
   
   Student Notes: 
-
+- print generates text
+- loop loops action
+- void setup and loop only exist once
+- 9600 baud optimal
   Documentation: 
     https://www.arduino.cc/reference/en/language/functions/communication/serial/
     https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-serial-plotter
