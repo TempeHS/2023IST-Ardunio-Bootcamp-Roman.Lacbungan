@@ -10,14 +10,25 @@
     6. I understand the difference between a global variable and a function variable 
 
   Student Notes: 
-
+  - use "static" for secutity
+  - unsigned int is no negative
   Documentation: 
     https://www.arduino.cc/reference/en/#variables
     https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/
 */
 
-void setup() {
+int myInt = 3;
+String myString = "3";
+bool myBool = false;
+float myFloat = 1.1;
 
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Serial Monitor is configured to 9600");
+  Serial.println("----------");
+  Serial.print("Data stored: ");
+  myString = String(myBool);
+  Serial.println(myString);
 }
 
 void loop() {
