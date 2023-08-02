@@ -23,10 +23,22 @@
 
 */
 
-void setup() {
+static unsigned int myLED = 4;
+static unsigned int myBuzzer = 3;
 
+void setup() {
+Serial.begin(9600);
+Serial.println("Serial monitor configured to 9600");
+Serial.println("----------------------");
+pinMode(myLED, OUTPUT);
+pinMode(myBuzzer, OUTPUT);
 }
 
 void loop() {
-
+  digitalWrite(myLED, HIGH);
+  tone(myBuzzer, 128);
+  delay(500);
+  digitalWrite(myLED, LOW);
+  noTone(myBuzzer);
+  delay(5000);
 }
