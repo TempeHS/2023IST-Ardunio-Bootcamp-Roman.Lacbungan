@@ -1,5 +1,5 @@
 /*
-  Author: 
+  Author: Roman Lacbungan
    Learning Intention: The students understand binary logic and apply it to a range of control structures.
     1. I understand Binary Logic is asking questions that only have a true and false outcome
     2. I can apply different comparison operators to get a desired outcome in a basic if else control structure 
@@ -31,10 +31,22 @@
     
 */
 
+static unsigned int myLED = 13;
+
 void setup() {
+Serial.begin(9600);
+Serial.println("Serial monitor configured to 9600 o/");
+Serial.println("----------------------");
+pinMode(myLED, OUTPUT);
 
 }
 
 void loop() {
-
+  for (int i = 0; i < 10; i++) {
+  analogWrite(myLED, HIGH);
+  delay(100);
+  analogWrite(myLED, LOW);
+  delay(100);
+  Serial.println(i);
+}
 }
