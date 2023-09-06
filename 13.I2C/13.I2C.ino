@@ -64,17 +64,9 @@ if(!bmp280.init()){
   }
 }
 
-
 void loop() {
 // read air pressure
-  float myPressure = bmp280.getPressure();
-  float myTemp = bmp280.getTemperature();
-  float myAltitude = bmp280.calcAltitude(myPressure);
 
-  myMessage = "Good morning";
-  myMessage2 = "Today's Temp is: " + String(myTemp) + "c";
-
-
-printToOLED(myMessage, myMessage2);
+printToOLED (myTemp(), myPressure());
 
 }
